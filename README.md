@@ -7,7 +7,6 @@ A lightweight visualization plugin for SketchUp that exports geometry data and g
 ## 📌 Overview
 
 This project demonstrates a simplified rendering pipeline:
-
 1. SketchUp Plugin (Ruby)
 2. Model Export (JSON)
 3. Python Renderer
