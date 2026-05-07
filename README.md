@@ -87,7 +87,7 @@ python_exe = "C:/Python3/python.exe"
 ## ▶️ Usage
 1. Open SketchUp
 2. Create a simple model (e.g., cube)
-3. Click "Export Render" button
+3. Click "Export model and render" button
 4. The system will:
 *   Export sketchup_model.json
 *   Run Python renderer
