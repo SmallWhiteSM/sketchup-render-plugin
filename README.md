@@ -1,6 +1,6 @@
 # SketchUp Simple Renderer Plugin
 
-A lightweight rendering plugin for SketchUp that exports model geometry and renders it using a custom Python-based renderer.
+A lightweight visualization plugin for SketchUp that exports geometry data and generates a simple rendered image using Python.
 
 ---
 
@@ -56,7 +56,8 @@ sketchup-render-plugin/
 - Export SketchUp model geometry (faces & vertices)
 - Convert 3D data into JSON format
 - Custom Python renderer
-- Basic Lambert shading (lighting effect)
+- Basic polygon rendering
+- Simple 3D to 2D projection
 - Automatic image output after rendering
 
 ---
