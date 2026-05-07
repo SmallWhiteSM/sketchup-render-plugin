@@ -14,7 +14,6 @@ module SimpleRenderPlugin
     }
 
     entities.grep(Sketchup::Face).each do |face|
-      # vertices = face.vertices.map { |v| [v.position.x, v.position.y, v.position.z] }
       vertices = face.vertices.map { |v|
         [
           v.position.x.to_f,
@@ -31,8 +30,8 @@ module SimpleRenderPlugin
       }
     end
 
-    # 存檔位置
-    path = File.join("C:\\Users\\SmallWhiteSM\\Desktop", "sketchup_model.json") #old code: path = File.join(Dir.home, "sketchup_model.json")
+    # 存檔位置（建議改成你的實際儲存路徑）
+    path = File.join("C:\\Users\\...\\Desktop", "sketchup_model.json")
 
     File.open(path, "w") do |file|
       file.write(JSON.pretty_generate(data))
@@ -44,21 +43,12 @@ module SimpleRenderPlugin
     run_renderer(path)
   end
 
-  # 呼叫外部 Python
-  # def self.run_renderer(json_path)
-  #   python_cmd = "python render.py \"#{json_path}\""
-  #   begin
-  #     system(python_cmd)
-  #   rescue => e
-  #     UI.messagebox("執行 renderer 失敗：#{e.message}")
-  #   end
-  # end
   def self.run_renderer(json_path)
     # 取得 render.py 的絕對路徑
     script_path = File.join(File.dirname(__FILE__), "render.py")
 
     # Python（建議改成你的實際路徑）
-    python_exe = "C:\\Users\\SmallWhiteSM\\anaconda3\\python.exe"
+    python_exe = "C:\\Users\\...\\python.exe"
 
     cmd = "\"#{python_exe}\" \"#{script_path}\" \"#{json_path}\""
 

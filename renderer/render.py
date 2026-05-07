@@ -26,7 +26,7 @@ def project(vertex):
     )
 
 
-def render(model, json_path):  #def render(model, output_path="C:\\Users\\SmallWhiteSM\\Desktop\\output.png"):
+def render(model, json_path):
     output_path = json_path.replace(".json", ".png")
 
     image = Image.new("RGB", (WIDTH, HEIGHT), "white")
@@ -36,7 +36,7 @@ def render(model, json_path):  #def render(model, output_path="C:\\Users\\SmallW
         points = [project(v) for v in face["vertices"]]
 
         # 填色（隨便給個顏色）
-        draw.polygon(points, outline="red", fill="lightgray") #old：draw.polygon(points, outline="black", fill="lightgray")
+        draw.polygon(points, outline="red", fill="lightgray")
 
     image.save(output_path)
     print(f"Render complete: {output_path}")
